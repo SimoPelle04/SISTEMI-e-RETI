@@ -1,0 +1,72 @@
+							MODULO	TURTLE 
+
+Il modulo turtle è fondamentale per la grafica su python perche fornisce le istruzioni base per creare elementi grafici.
+Per essere utilzzato però è necessario che Python sia installato con il supporto di Tk.
+
+Questo modulo usa una penna ed una tela che vengono automaticamente create quando viene chiamata una qualsiasi funzione grafica.
+In preatica è una piccola freccia nera che si muove lentamente sullo schermo e lascia una scia mentre si muove sullo schermo.
+
+Per utilizzare questo modulo bisogna importare il modulo all inizio del progetto scrivendo "import turtle".
+ 
+
+FUNZIONI MODULO TURTLR
+
+degrees( 	):Imposta a gradi l'unità di misura degli angoli. 
+
+radians( 	): Imposta a radianti l'unità di misura degli angoli. 
+
+reset( 	): Pulisce lo schermo, riporta la penna al centro e setta le variabili con i valori predefiniti. 
+
+clear( 	): Cancella lo schermo. 
+
+tracer( 	flag): Accende o spegne la funzione di tracciatura (a seconda se l'opzione viene impostata a vero o falso). La funzione di tracciatura fa in modo che le linee siano disegnate più lentamente, con l'animazione della freccia lungo il percorso. 
+
+forward( 	distance): Va avanti di distance passi. 
+
+backward( 	distance): Va indietro di distance passi. 
+
+left( 	angle): Ruota a sinistra di unità angle. Le unità predefinite sono gradi, ma possono essere modificate attraverso le funzioni degrees() e radians(). 
+
+right( 	angle): Ruota a destra di unità angle. Le unità predefinite sono gradi, ma possono essere modificate attraverso le funzioni degrees() e radians(). 
+
+up( 	): Solleva la penna -- da questo momento in poi si muove senza disegnare. 
+
+down( 	): Appoggia la penna -- da questo momento in poi quando si muove disegna. 
+
+width( 	width): Imposta la larghezza della traccia della penna a width. 
+
+PER DEFINIRE IL COLORE DELLA PENNA:
+color( 	s):  il colore viene indicato da una striga che contiene il nome Tk di un colore.
+color( 	(r, g, b)): indica il colore come una tupla con i 3 valori RGB, ognuno nell'intervallo [0..1].
+color( 	r, g, b): il colore viene indicato fornendo i valori RGB come tre parametri separati
+
+
+write( 	text[, move]):
+Scrive il testo text nella posizione corrente della penna. Se move viene impostato a vero, la penna viene spostata nell'angolo in basso a sinistra del testo. 
+Il valore predefinito di move è falso. 
+
+
+fill( 	flag)
+    chiamate fill(1) prima di disegnare il percorso che volete riempire e 
+    chiamate fill(0) quando avete finito di tracciare il percorso. 
+
+
+circle( 	radius[, extent])
+    Disegna un cerchio di raggio radius.Extent determina quale parte del cerchio viene disegnata: se non indicato viene disegnato un cerchio completo.
+    Se extent non è a cerchio completo, l'estremo finale dell'arco diventa la posizione corrente della penna. 
+    L'arco viene disegnato nel verso anti orario, se radius è positivo, altrimenti nel verso orario.
+
+
+VAI ALLE COORDINATE X, Y:
+goto( 	x, y): scritte come  due argomenti separati
+goto( 	(x, y)): scritte con una tupla di due elementi. 
+    
+
+demo() definisce le seguenti classi:
+
+class Pen( 	)
+    Definisce una penna. Tutte le funzioni descritte sopra possono essere chiamate come metodi di una data penna.
+    Il costruttore crea automaticamente una superficie dove disegnare. 
+
+class RawPen( 	canvas)
+    Definisce una penna che disegna sulla superficie di un canvas. Questo è utile se volete usare il modulo per creare elementi grafici in un programma ``reale''. 

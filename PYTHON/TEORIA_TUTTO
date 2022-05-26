@@ -1,0 +1,8 @@
+elemento in lista //serve per vedere se elemento è contenuto in lista e restituisce un booleano
+elemento not in lista // serve per vedere se elemento NON è contenuto in lista e restituisce un booleano
+
+for k,elemento in enumerate(lista): //cosi abbiamo sia l'indice(k) che l'elemento(elemento)
+ dizionario[k] = elemento
+
+//DICTIONARI COMPRENSHON
+dizionario = {x:elemento for k, elemento in enumerate(lista)}

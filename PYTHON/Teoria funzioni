@@ -1,0 +1,24 @@
+def nomeFunzione(parametri):
+    codice
+    return variabile
+
+RITORNA PIU VARIABILI
+
+    def SommaMoltiplicazione(x,y):
+        somma=x+y
+        moltiplicazione = x*y
+        return somma, moltiplicazione
+
+    sommaMoltiplicazione = lambda x,y :(x+y,x*y) UGUALE A FUNZIONE SOPRA
+    MAIN
+    s,m=SommaMoltiplicazione(3,2)
+
+POSSO RITORNARE TUTTO
+ES DIZIONARI:
+    def SommaMoltiplicazione(x,y):
+            somma=x+y
+            moltiplicazione = x*y
+            return {"somma":somma, moltiplicazine":moltiplicazione}
+
+        MAIN
+        s,m=SommaMoltiplicazione(3,2)

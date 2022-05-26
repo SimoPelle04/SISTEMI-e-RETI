@@ -1,0 +1,5 @@
+nome = input("DIMMI IL TUO NOME: ")
+anni = int (input("DIMMI QUANTI HANNI HAI: "))
+print (f"Tu ti chiami {nome} e hai {anni} anni.")
+print (f"il tuo nome comincia per {nome[0]}")
+print (f"il tuo nome comincia per {nome[-1]}")

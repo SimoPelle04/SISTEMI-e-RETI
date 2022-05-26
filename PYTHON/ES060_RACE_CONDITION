@@ -1,0 +1,43 @@
+#RACE CONDITION: QUANDO I TRHEAD UGUALI VANNO IN PARALLELO E SELVANDO TUTTI E DUE SULLE STESSE VARIABILI O RISORSA 
+#E SI PERDONO DEI DATI NON POTENDO SEPERE QUALI
+from fileinput import filename
+from threading import Thread, Lock
+import time
+
+lock = Lock() #GLOBALE PERCHE DEVONO USARA TUTTI I THREAD
+
+
+class Mythread(Thread):
+    def __init__(self,file,data):
+        Thread.__init__(self)
+        self.file = file
+        self.data = data
+    def run(self):
+
+        lock.acquire()#PER FAR ESEGUIRE LA PARTE TRA IL ACQUIRE E RELEASE VENGA ESEGUITA DA UN SOLO THREAD ALLA VOLTA
+        for riga in self.data:
+            self.file.write(riga) #SEZIONE CRITICA = E' LA PARTE CHE ACCEDE ALLE RISORSE E SE I DUE TRHEAD PARTONO FANNO GARA CA CHI LA UTILIZZA 
+            time.sleep(0.2)
+        lock.release()
+
+
+
+
+def main():
+    filename = "./RaceCondition.txt"
+    aliceData = ["alice\n"]*10
+    bobData = ["bob\n"]*10
+
+    f = open (filename,"w")
+
+    alice = Mythread(f,aliceData)
+    bob = Mythread(f, bobData)
+
+    alice.start()
+    bob.start()
+    alice.join()
+    bob.join()
+
+
+if __name__=="__main__":
+    main()

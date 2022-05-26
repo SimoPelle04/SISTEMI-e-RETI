@@ -1,0 +1,24 @@
+CONTENITORI: in python ci sono tantissimi contenitori noi ne utilizzeremo 3:
+
+DUNDER = DOPPIO UNDER SCORE (__)
+
+1)TUPLE:Sono immutabili NON POSSO MODIFICARLA,esempio (1,0,-1,10)una tupla di 4 elementi
+    tupla = (1,0,-1,10)
+     print(tupla) #stampa tupla 
+2)LISTE:sono mutabili POSSO CAMBIARLE, 
+    lista  = [3,2.45,"ciao"]
+    print(lista)
+    print(lista[-1])#stampo solo ciao come per le stringhe 
+
+    numeri_primi = [2,3,5,7,11,13]
+    numeri_primi.append(6) #aggiungera il numero 17 a numeri_primi
+    len(numeri_primi)#PER TROVARE LA LUNGHEZZA DI UNA LISTA 
+    altri_numeri_primi = [19,23,29]
+    unione_numeri_primi = numeri_primi +  altri_numeri_primi #UNIIONE DI DUE LISTE 
+    print(5*altri_numeri_primi)#STAMPA 5 VOLTE altri_numeri_primi
+    
+3)DIZIONARI:particolari perchè ogni elemento di un dizionario è una coppia e ogni coppia è costituita da una chiave e un valore 
+
+    es:
+    dizionario = {"to get":"prendere","hello":"ciao","print":"stampa"}
+    print(dizionario["hello"])#QUESTO STAMPERA LA TRAUZIONE QUINDI CIAO DA CHIAVE VA A VALORE 
